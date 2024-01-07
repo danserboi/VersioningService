@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "4419463e-72e0-488a-b787-cdbd846163a4",
+		"name": "Versioning Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11276571"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Dan/Desktop/example.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8089/file/create?filename=e/example.txt.extension",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8089",
+					"path": [
+						"file",
+						"create"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "e/example.txt.extension"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/Dan/Desktop/example.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8089/file/update?filename=e/example.txt.extension",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8089",
+					"path": [
+						"file",
+						"update"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "e/example.txt.extension"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8089/file/read?filename=e/example.txt.extension&version=1",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8089",
+					"path": [
+						"file",
+						"read"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "e/example.txt.extension"
+						},
+						{
+							"key": "version",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8089/file/delete?filename=e/example.txt.extension",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8089",
+					"path": [
+						"file",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "filename",
+							"value": "e/example.txt.extension"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "number-of-files",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8089/storage/number-of-files",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8089",
+					"path": [
+						"storage",
+						"number-of-files"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "match-filename",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8089/storage/match-filename?regexp=examp.*",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8089",
+					"path": [
+						"storage",
+						"match-filename"
+					],
+					"query": [
+						{
+							"key": "regexp",
+							"value": "examp.*"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
